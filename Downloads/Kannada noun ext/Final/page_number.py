@@ -37,3 +37,23 @@ with open("pagenumber_mapping.txt", "w", encoding="utf-8") as f:
         page_numbers_str = ' '.join(page_numbers)
        
         f.write(f"{noun}- {page_numbers_str}\n")
+
+
+
+#cleaning optional (based on the file)
+
+with open('noun_page_mapping.txt', 'r', encoding='utf-8') as file:
+    lines = file.readlines()
+
+
+with open('finalpg.txt', 'w', encoding='utf-8') as new_file:
+  
+    for line in lines:
+      
+        if "ಮೂಲಕ) ದೇಶವೆಂಬ ಪ್ರಾಚೀನವಾದ ದೇಶವಾಚಕದ ಮೂಲಕವಾಗಿಯೇ ಈ ಹೆಸರು ಉಗಮಿಸಿರುವುದು ಬಲುಮಟ್ಟಿಗೆ ಸಂಭಾವ್ಯವಾದುದು. ಆ ಪ್ರದೇಶದ ಬ್ರಾಹ್ಮಣರ ಒಂದು ಶಾಖೆ ದಕ್ಷಿಣಾಪಥಕ್ಕೆ ವಲಸೆ ಬಂದು, ಕಡಪ ಜಿಲ್ಲೆಯ ಸುತ್ತಮುತ್ತ ನೆಲಸಿದ ಕಾರಣವಾಗಿಯೇ ಅದರ ಒಂದು ನಿಷ್ಪನ್ನರೂಪವಾಗಿ ಮೊದಲು ಮುಲಿಕಿ/ಮುಲ್ಕಿ ಎಂಬುದು ಕಾಣಿಸಿಕೊಂಡು, ಬಳಿಕ ಲ" in line:
+           
+            line = line.replace("ಮೂಲಕ) ದೇಶವೆಂಬ ಪ್ರಾಚೀನವಾದ ದೇಶವಾಚಕದ ಮೂಲಕವಾಗಿಯೇ ಈ ಹೆಸರು ಉಗಮಿಸಿರುವುದು ಬಲುಮಟ್ಟಿಗೆ ಸಂಭಾವ್ಯವಾದುದು. ಆ ಪ್ರದೇಶದ ಬ್ರಾಹ್ಮಣರ ಒಂದು ಶಾಖೆ ದಕ್ಷಿಣಾಪಥಕ್ಕೆ ವಲಸೆ ಬಂದು, ಕಡಪ ಜಿಲ್ಲೆಯ ಸುತ್ತಮುತ್ತ ನೆಲಸಿದ ಕಾರಣವಾಗಿಯೇ ಅದರ ಒಂದು ನಿಷ್ಪನ್ನರೂಪವಾಗಿ ಮೊದಲು ಮುಲಿಕಿ/ಮುಲ್ಕಿ ಎಂಬುದು ಕಾಣಿಸಿಕೊಂಡು, ಬಳಿಕ ಲ", "")
+
+       
+        new_file.write(line)
+
